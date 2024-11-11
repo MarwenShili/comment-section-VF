@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none !important;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --main-color: #3e52a3;
+  --text-color: #4f5457aa;
+  --bg-color: #edf2f4;
+  --grand-text-color: #212529;
+  --split-color: #adadb728;
+}
+
+body {
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 300;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  height: 100%;
+}
+
+.attribution {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--main-color);
+}
+main {
+  position: relative;
+}
+.comments-section {
+  width: 70rem;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-container {
+  margin: 2rem 0 0 0;
+  width: 100%;
+  padding: 2.4rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  gap: 2rem;
+  height: fit-content;
+  z-index: 1;
+}
+
+.vote-box {
+  height: 9rem;
+  width: 3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #dee2e657;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.8rem;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.vote-box img {
+  width: 1.2rem;
+  filter: brightness(1.05);
+}
+
+.vote {
+  color: var(--main-color);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.comment-box {
+  width: 100%;
+}
+
+.user-info-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  height: 3.2rem;
+}
+
+.user-name {
+  color: var(--grand-text-color);
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.comment-time {
+  font-size: 1.6rem;
+}
+
+.btn-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.btn {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  z-index: 1;
+}
+
+.btn span {
+  font-size: 1.6rem;
+  letter-spacing: 0.6px;
+  font-weight: 500;
+}
+
+.btn-reply span {
+  color: var(--main-color);
+}
+.btn-delete {
+  color: #e44a4aff;
+}
+
+.user-comment {
+  line-height: 1.48;
+  font-size: 1.5rem;
+  min-height: 2rem;
+  width: 100%;
+}
+
+/* replies design */
+
+.replies {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  height: fit-content;
+}
+
+.splitter {
+  width: 0.2rem;
+  height: 100%;
+  background: var(--split-color);
+  margin: auto;
+}
+
+/* add comment element */
+.add-comment-box {
+  align-items: flex-start;
+}
+
+.add-comment-box img {
+  width: 4rem;
+}
+
+textarea {
+  min-height: 10rem;
+  width: 80%;
+  border-radius: 5px;
+  border: 1px solid var(--split-color);
+  padding: 1.6rem;
+  resize: none;
+  font-family: "Maven Pro", sans-serif;
+}
+
+textarea::placeholder {
+  color: var(--text-color);
+  font-size: 1.4rem;
+  font-family: sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.btn-send {
+  background-color: var(--main-color);
+  border-radius: 5px;
+  color: #fff;
+  padding: 1.2rem 2.4rem;
+  text-transform: uppercase;
+}
+
+/* reply adding */
+.add-reply {
+  grid-column: 1/-1;
+  z-index: 1;
+}
+
+.btn-send-reply {
+  background-color: var(--main-color);
+  border-radius: 5px;
+  color: #fff;
+  padding: 1.2rem 2.4rem;
+  text-transform: uppercase;
+}
+
+.section-delete {
+  position: absolute;
+  left: 0;
+  margin-top: -3rem;
+  width: 100%;
+  height: 110%;
+  background-color: #21252933;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-box {
+  background-color: #edf2f4;
+  border-radius: 12px;
+  padding: 3rem;
+  width: 38rem;
+  height: 22rem;
+  z-index: 2;
+}
+
+.delete-box h2 {
+  font-size: 2.2rem;
+  color: var(--grand-text-color);
+}
+
+.delete-box p {
+  line-height: 1.5;
+  font-size: 1.6rem;
+  margin: 2rem 0 2rem 0;
+}
+
+.btn-box {
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  gap: 3.6rem;
+  align-items: center;
+}
+
+.yes-no {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+}
+
+.no {
+  background-color: #384c60dd;
+}
+.yes {
+  background-color: #e44a4aff;
+}
+
+.btn-edit {
+  color: var(--main-color) !important;
+}
+
+.btn-submit {
+  color: var(--main-color) !important;
+}
+
+@media (max-width: 780px) {
+  html {
+    font-size: 50%;
+  }
+  .comments-section {
+    width: 100%;
+  }
+  .comments > .comment-reply-box {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .add-comment-box {
+    width: 80%;
+    margin: 2rem auto 0 auto;
+  }
+}
+
+@media (max-width: 530px) {
+  div[class="comment-container"] {
+    flex-direction: column-reverse;
+    position: relative;
+  }
+  .vote-box {
+    flex-direction: row;
+    height: 3rem;
+    width: 9rem;
+    align-items: center;
+  }
+
+  .btn-vote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-container {
+    position: absolute;
+    right: 2rem;
+    bottom: 3rem;
+  }
+}
+
+.to-reply-to {
+  color: #3e52a3;
+  font-weight: 500;
+}
